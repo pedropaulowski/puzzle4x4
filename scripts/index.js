@@ -140,7 +140,7 @@ class Board {
         }
     }
 
-    imgUrl = (imgNumber) => { return `/img/img${imgNumber}.jpg`}
+    imgUrl = (imgNumber) => { return `./img/img${imgNumber}.jpg`}
     
 
     moveBlock = (target, shuffling = 0) => {
@@ -285,7 +285,7 @@ var tab = new Board()
 tab.drawBoard()
 
 
-document.querySelector('#imgHelp').setAttribute('src', `/img/img${imgNumber}.jpg`)
+document.querySelector('#imgHelp').setAttribute('src', `./img/img${imgNumber}.jpg`)
 
 
 
