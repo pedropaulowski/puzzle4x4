@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Quebra-Cabeça Slide</title>
+    <script defer src="/scripts/index.js"></script>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button id="helpButton" class="headerButton" 
+                onclick="document.querySelector('#help').style.display = 'flex'">
+                COMO JOGAR?
+            </button>
+            <h1>Quebre a cabeça</h1>
+        </header>
+        <div id="alert">
+            VOCÊ JÁ COMPLETOU O DESAFIO!
+        </div>
+        <main id="board">
+        </main>
+        <button id="play" onclick="tab.shuffle()" >
+            CLIQUE PARA EMBARALHAR! <br/>
+            DEPOIS AGUARDE!
+        </button>
+
+        <div id="movesCounter">
+            
+        </div>
+
+        <div id="finished" class="finished">
+            QUEBRA-CABEÇA COMPLETADO!
+        </div>
+
+        <div id="help">
+            <h2>COMO JOGAR?</h2>
+            
+            <text>
+                Seu objetivo é resolver o quebra cabeça.
+                <ul>
+                    <li>
+                        Primeiro: Clique em<button>
+                        CLIQUE PARA EMBARALHAR! <br/>
+                        DEPOIS AGUARDE!</button>
+                    </li>
+                  
+                    Assim que o quebra-cabeça for embaralhado você poderá resolvê-lo. Então:
+                    <li>
+                        Segundo: clique no bloco que você deseja mover para o espaço vazio, vá fazendo isso até conseguir a imagem perfeita.
+                        Que hoje é:<br/>
+                        <img alt='Imagem desejada' width="240px" id="imgHelp"class='imgBlock' src = ''/>
+                    </li>
+                    
+                </ul>
+
+            </text>
+            
+            <button id="closeHelp" 
+                onclick="document.querySelector('#help').style.display = 'none'" class="headerButton">
+                Fechar
+            </button>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
