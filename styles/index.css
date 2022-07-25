@@ -164,13 +164,12 @@ button[disabled] {
     top: 5%;
     display: none;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     margin: 5px;
     width: 80%;
     max-width: 1024px;
     min-width: 230px;
-    height: 90vh;
+    height: 100vh;
     align-self: center;
     padding: 10px 50px;
     background-color: var(--yellow);
@@ -178,4 +177,5 @@ button[disabled] {
     border: 5px solid var(--blue);
     /* box-shadow: 5px 5px 0px 0px var(--blue); */
     text-align: left;
+    overflow: scroll;
 }
