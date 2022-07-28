@@ -4,7 +4,6 @@ class Result {
     constructor() {
 
     }
-
     day = ''
     moves = ''
 }
@@ -34,29 +33,28 @@ class PreviousResults {
 class Board {
 
     constructor() {
+        this.shuffled = false
+
+        this.completed = false
+
+        this.board = [
+                [1, 2, 3, 4],
+                [5, 6, 7, 8],
+                [9, 10, 11, 12],
+                [13, 14, 15, 0],
+        ]
+
+        this.completeBoard = [
+                [1, 2, 3, 4],
+                [5, 6, 7, 8],
+                [9, 10, 11, 12],
+                [13, 14, 15, 0],
+        ]
+
+        this.blockImg = {}
+
+        this.moves = 0
     }
-
-    shuffled = false
-
-    completed = false
-
-    board = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 0],
-    ]
-
-    completeBoard = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 0],
-    ]
-
-    blockImg = {}
-
-    moves = 0
 
     shuffle = () => {
         document.querySelector('#play').setAttribute('disabled', '')
@@ -140,7 +138,7 @@ class Board {
         }
     }
 
-    imgUrl = (imgNumber) => { return `./img/img${imgNumber}.jpg`}
+    imgUrl = (imgNumber) =>  `./img/img${imgNumber}.jpg`
     
 
     moveBlock = (target, shuffling = 0) => {
